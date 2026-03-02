@@ -42,6 +42,7 @@ app.layout = html.Div(
 
                 html.H1(
                     "Soul Foods Pink Morsel Sales Visualiser",
+                    id="header",
                     style={
                         "textAlign": "center",
                         "color": "#2C3E50",
@@ -57,7 +58,7 @@ app.layout = html.Div(
                     children=[
 
                         dcc.RadioItems(
-                            id="region-filter",
+                            id="region-picker",
 
                             options=[
                                 {"label": "All", "value": "all"},
@@ -80,7 +81,7 @@ app.layout = html.Div(
                     ]
                 ),
 
-                dcc.Graph(id="sales-chart")
+                dcc.Graph(id="visualization")
 
             ]
         )
